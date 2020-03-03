@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+ <% include partials/head.ejs %>
+
+<body class="bg-theme bg-theme1">
+
+<% include partials/sidebar-wrappeer.ejs%>
+
+<div class="clearfix"></div>
+	
+  <div class="content-wrapper">
+    <div class="container-fluid">
+
+      <!--Start Dashboard Content-->
+  <!--start  row-->
+        
+        
+         
+          <div class="card">
+            <div class="card-header text-uppercase">Imágenes para descargar click botón derecho</div>
+             <div class="card-body">
+             <form action="/dashboard" method="POST">
+             <button type="submit" class="btn btn-gradient-secondary m-1">Nueva Búsqueda</button>
+             </form>
+             <div class="row">
+             <h2 style="margin-top:20px;text:center;" class="mb-0">High Quality Image</h2>
+             <img class="d-block w-100" src="<%=urlmx%>" alt="First slide">
+             <h2 style="margin-top:20px;" class="mb-0">Low Quality image</h2>
+             <img class="d-block w-100" src="<%=urlhq%>" alt="Second slide">
+             </div>
+          </div>
+        </div>
+       </div>
+      <!--end row-->
+  <!--start  row-->
+        
+        
+         
+          <div class="card">
+            <div class="card-header text-uppercase">Carousel Imágenes Youtube</div>
+             <div class="card-body">
+             <div class="row">
+             <div class="col-12 col-lg-12 col-xl-12">
+               <div id="carousel-2" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="<%=urlmx%>" alt="First slide">
+                    </div>
+                    <div class="carousel-item active">
+                      <img class="d-block w-100" src="<%=urlhq%>" alt="Second slide">
+                    </div>
+                   
+                  <a class="carousel-control-prev" href="#" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                  </a>
+                  <a class="carousel-control-next" href="#" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Posterior</span>
+                  </a>
+                </div>
+             </div>
+          </div>
+          <form action="/dashboard" method="POST">
+             <button style="margin-top:20px;" type="submit" class="btn btn-gradient-secondary m-1">Nueva Búsqueda</button>
+             </form>
+        </div>
+       </div>
+      <!--end row-->
+      <!--End Dashboard Content-->
+    <!--start overlay-->
+	  <div class="overlay toggle-menu"></div>
+    <!--end overlay-->
+	
+    </div>
+    <!-- End container-fluid-->
+    
+    </div><!--End content-wrapper-->
+  
+	
+	
+  <% include partials/footer.ejs %>	
+ 
+   
+  </div><!--End wrapper-->
+  <% include partials/corejs.ejs %>
+
+  
+</body>
+</html>
